@@ -74,6 +74,37 @@ print("Hello Python! Practise 2.0")
 # fruits = input().split()
 # print(fruits)
 
-# Tuple Input
+# Km to meter conversion
+# kilometers = float(input("Enter the distance in kilometers: "))
+# conversion_factor = kilometers*1000
+# print(f" {kilometers} kilometers is equal to {conversion_factor} meters.")
+
+# Tuple (Ordered and immutable collection of elements) ⭐ (Very Important for DSA)
+# Implementation , why we need it , Real world application in tuple
+
+
+# Add two tuples
+tea = ("Green Tea","Black Tea")
+new_tea = ("Herbal Tea", "Chai Tea")
+print(tea + new_tea)
+print(tea.count("Green Tea"))
+
+
+
+
+
+
+
+
+# declare the tuple first
+# my_tuple = ("Harsh","29","Python")
+# print(my_tuple[1])
+
+
+# Medium Level Python practise questions
+
+
+
+
 
 

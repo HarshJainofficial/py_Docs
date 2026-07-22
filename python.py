@@ -2,8 +2,8 @@ print("Hello Python! Practise 2.0")
 
 # Print Area of Rectangle
 
-# length = 5 
-# width = 2 
+# length = 5
+# width = 2
 # area = length * width
 # print("Area of Rectangle is",area)
 
@@ -15,7 +15,7 @@ print("Hello Python! Practise 2.0")
 # print(fahrenheit)
 
 
-# Boolean Input question 
+# Boolean Input question
 # There is no direct boolean input. Convert it yourself.
 # answer = input("True or False ").lower()
 # is_valid = answer == "true"
@@ -47,19 +47,18 @@ print("Hello Python! Practise 2.0")
 # print(float(p*q*r)/100)
 
 
-
 # Function in Py : Simple interest calculate by function ( Problem)
 
 # def simple_interest(p,r,t):
 #     si = (p*r*t)/100
-#     return si 
+#     return si
 
 # Single line input as float
-# p = float(input("Enter the principle :")) 
+# p = float(input("Enter the principle :"))
 # q = float(input("Enter the rate :"))
 # r = float(input("Enter the time(in years): "))
 
-# Multiple line input as float 
+# Multiple line input as float
 # p,q,r = map(float,input("Enter the principle , rate and time").split())
 
 # interest = simple_interest(p,q,r)
@@ -84,16 +83,11 @@ print("Hello Python! Practise 2.0")
 
 
 # Add two tuples
-tea = ("Green Tea","Black Tea")
-new_tea = ("Herbal Tea", "Chai Tea")
-print(tea + new_tea)
-print(tea.count("Green Tea"))
 
-
-
-
-
-
+# tea = ("Green Tea", "Black Tea")
+# new_tea = ("Herbal Tea", "Chai Tea")
+# print(tea + new_tea)
+# print(tea.count("Green Tea"))
 
 
 # declare the tuple first
@@ -104,7 +98,29 @@ print(tea.count("Green Tea"))
 # Medium Level Python practise questions
 
 
+# Swap two string
+# name_one = "Harsh"
+# name_two = "Jain"
+# name_one, name_two = name_one[::-1], name_two[::-1]
+# print(name_one, name_two)
+
+# functions in Python
+# a customer adds products to their cart
+# function type
+def calculate_cart_total(cart):
+    total = 0
+
+    for item in cart:
+        total += item["price"] * item["quantity"]
+
+    return total
 
 
+cart = [
+    {"name": "Keyboard", "price": 1500, "quantity": 2},
+    {"name": "Mouse", "price": 700, "quantity": 1},
+    {"name": "Monitor", "price": 12000, "quantity": 1}
+]
 
-
+total = calculate_cart_total(cart)
+print(total)

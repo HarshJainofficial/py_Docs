@@ -106,21 +106,49 @@ print("Hello Python! Practise 2.0")
 
 # functions in Python
 # a customer adds products to their cart
+
 # function type
-def calculate_cart_total(cart):
-    total = 0
 
-    for item in cart:
-        total += item["price"] * item["quantity"]
+# def calculate_cart_total(cart):
+#     total = 0
 
-    return total
+#     for item in cart:
+#         total += item["price"] * item["quantity"]
+
+#     return total
+
+# def calculate_gst_total(total):
+#     gst = total*0.18
+#     return gst
+
+# cart = [
+#     {"name": "Keyboard", "price": 1500, "quantity": 2},
+#     {"name": "Mouse", "price": 700, "quantity": 1},
+#     {"name": "Monitor", "price": 12000, "quantity": 1}
+# ]
+
+# total = calculate_cart_total(cart)
+# print(total)
+# gst = calculate_gst_total(total)
+# print(gst)
 
 
-cart = [
-    {"name": "Keyboard", "price": 1500, "quantity": 2},
-    {"name": "Mouse", "price": 700, "quantity": 1},
-    {"name": "Monitor", "price": 12000, "quantity": 1}
-]
+##    (if __name__ == "__main__")  
 
-total = calculate_cart_total(cart)
-print(total)
+# def add(a, b):
+#     return a+b
+
+
+# def main():
+#     print(add(2, 2))
+
+
+# if __name__ == "__main__":
+#     main()
+    
+    
+# How to use enumerate Like Key-value pair
+cars = ["Audi","BMW","Volvo"]
+
+for index,car in enumerate(cars):
+    print(index,car)

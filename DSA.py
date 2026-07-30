@@ -72,25 +72,56 @@ class DSA:
     #     return max_water 
     
     # Sliding Window Concept
-    def Optimal_solution_SWC(num,k):
-        n = len(num) - 1 
-        sum = 0
-        for i in range(k):
-            sum +=num[i]
-            maxSum  = sum
-        # print(sum)  
+    # def Optimal_solution_SWC(num,k):
+    #     n = len(num) - 1 
+    #     sum = 0
+    #     for i in range(k):
+    #         sum +=num[i]
+    #         maxSum  = sum
+    #     # print(sum)  
           
-        for j in range(k,n):
-            sum = sum - num[j-k] + num[j]
-            maxSum = max(sum ,maxSum )
-        return maxSum
+    #     for j in range(k,n):
+    #         sum = sum - num[j-k] + num[j] 
+    #         maxSum = max(sum ,maxSum )
+    #     return maxSum
+    
+    # def BF_solution_Sliding_window(num,k):
+    #     sum = 0
+        
+    #     n = len(num) - 1 
+    #     for i in range(n-k+1):
+    #         maxSum = 0
+    #         for j in range(k):
+    #             sum +=num[i+j]
+    #             maxSum = max(sum,maxSum)
+    #     return maxSum
+                
+    def Prefix_sum(num,k,m):
+        sum = 0
+        for i in range(k,m):
+            sum += num[i]
+        return sum
+    
+    # def Optimal_solution_SWC_avg(num,k):
+    #         n = len(num) - 1 
+    #         sum = 0
+    #         for i in range(k):
+    #             sum +=num[i]
+    #             maxSum  = sum
+    #         # print(sum)  
+              
+    #         for j in range(k,n):
+    #             sum = sum - num[j-k] + num[j] 
+    #             maxSum = max(sum ,maxSum )
+                
+    #         return maxSum/k
  
     
     def main():
-        num = [2, 1, 5, 1, 3, 2]
-        k = 3
+        num = [1,12,-5,-6,50,3]
+        k = 2
         # target = 9
-        print(DSA.Optimal_solution_SWC(num,k))
+        print(DSA.Prefix_sum(num,0,2))
         
         
 DSA.main()    

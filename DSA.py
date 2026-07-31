@@ -96,11 +96,7 @@ class DSA:
     #             maxSum = max(sum,maxSum)
     #     return maxSum
                 
-    def Prefix_sum(num,k,m):
-        sum = 0
-        for i in range(k,m):
-            sum += num[i]
-        return sum
+   
     
     # def Optimal_solution_SWC_avg(num,k):
     #         n = len(num) - 1 
@@ -115,13 +111,47 @@ class DSA:
     #             maxSum = max(sum ,maxSum )
                 
     #         return maxSum/k
+    
+    def Prefix_sum(num,k):
+            sum=  num[0]
+            for i in range(1,k):
+                sum += num[i]
+            return sum
+        
+    # Greedy Algorithm Technique
+    
+    def Greedy_algorithm(n,s):
+        if s>n*9:
+            return -1
+        result = []
+        # digit.append(str(9))
+        # digit.append(str(9))
+        # digit.append(str(5))
+        # digit.append(str(0))
+        # digit.append(str(0))
+        # print ("".join(digit))
+        
+        for _ in range(n):
+            digit = min(9,s)
+            result.append(str(digit))
+            s -= digit
+        
+        return "".join(result)
+        # if s > 9*n:
+        #     return -1 
+        
+        # for i in range(n):
+        #     digit = min()
+        
+        
  
     
     def main():
         num = [1,12,-5,-6,50,3]
-        k = 2
+        k = 4
         # target = 9
-        print(DSA.Prefix_sum(num,0,2))
+        n,s =2,9
+        print(DSA.Greedy_algorithm(n,s))
         
         
 DSA.main()    
